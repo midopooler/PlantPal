@@ -9,10 +9,11 @@ This plant identification app provides an excellent reference for developers loo
 See PlantPal in action:
 
 ### Plant Identification
-<img src="Demo-videos/ScreenRecording_07-02-2025 18-27-46_1.gif" alt="PlantPal Plant Identification Demo" width="300"/>
+<img src="Demo-videos/ScreenRecording_07-03-2025 13-31-08_1.gif" alt="PlantPal Plant Identification Demo" width="300"/>
+
 
 ### Plant Care Chat
-<img src="Demo-videos/ScreenRecording_07-03-2025 13-31-08_1.gif" alt="PlantPal Plant Care Chat Demo" width="300"/>
+<img src="Demo-videos/ScreenRecording_07-02-2025 18-27-46_1.gif" alt="PlantPal Plant Care Chat Demo" width="300"/>
 
 # Try the Demo
 

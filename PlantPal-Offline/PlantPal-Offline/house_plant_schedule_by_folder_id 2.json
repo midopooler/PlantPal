@@ -1,0 +1,1365 @@
+[
+  {
+    "id": "ZZ Plant (Zamioculcas zamiifolia)",
+    "species": "Zamioculcas zamiifolia",
+    "commonName": "ZZ Plant",
+    "scientificName": "Zamioculcas zamiifolia",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The ZZ Plant (Zamioculcas zamiifolia) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Yucca",
+    "species": "Yucca spp.",
+    "commonName": "Yucca",
+    "scientificName": "Yucca spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Yucca (Yucca spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Venus Flytrap",
+    "species": "Venus Flytrap spp.",
+    "commonName": "Venus Flytrap",
+    "scientificName": "Venus Flytrap spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Venus Flytrap (Venus Flytrap spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Tulip",
+    "species": "Tulip spp.",
+    "commonName": "Tulip",
+    "scientificName": "Tulip spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Tulip (Tulip spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Tradescantia",
+    "species": "Tradescantia spp.",
+    "commonName": "Tradescantia",
+    "scientificName": "Tradescantia spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Tradescantia (Tradescantia spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Snake plant (Sansevieria)",
+    "species": "Sansevieria",
+    "commonName": "Snake plant",
+    "scientificName": "Sansevieria",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Snake plant (Sansevieria) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Schefflera",
+    "species": "Schefflera spp.",
+    "commonName": "Schefflera",
+    "scientificName": "Schefflera spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Schefflera (Schefflera spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Sago Palm (Cycas revoluta)",
+    "species": "Cycas revoluta",
+    "commonName": "Sago Palm",
+    "scientificName": "Cycas revoluta",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Sago Palm (Cycas revoluta) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Rubber Plant (Ficus elastica)",
+    "species": "Ficus elastica",
+    "commonName": "Rubber Plant",
+    "scientificName": "Ficus elastica",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Rubber Plant (Ficus elastica) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Rattlesnake Plant (Calathea lancifolia)",
+    "species": "Calathea lancifolia",
+    "commonName": "Rattlesnake Plant",
+    "scientificName": "Calathea lancifolia",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Rattlesnake Plant (Calathea lancifolia) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Prayer Plant (Maranta leuconeura)",
+    "species": "Maranta leuconeura",
+    "commonName": "Prayer Plant",
+    "scientificName": "Maranta leuconeura",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Prayer Plant (Maranta leuconeura) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Pothos (Ivy arum)",
+    "species": "Ivy arum",
+    "commonName": "Pothos",
+    "scientificName": "Ivy arum",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Pothos (Ivy arum) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Ponytail Palm (Beaucarnea recurvata)",
+    "species": "Beaucarnea recurvata",
+    "commonName": "Ponytail Palm",
+    "scientificName": "Beaucarnea recurvata",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Ponytail Palm (Beaucarnea recurvata) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Polka Dot Plant (Hypoestes phyllostachya)",
+    "species": "Hypoestes phyllostachya",
+    "commonName": "Polka Dot Plant",
+    "scientificName": "Hypoestes phyllostachya",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Polka Dot Plant (Hypoestes phyllostachya) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Poinsettia (Euphorbia pulcherrima)",
+    "species": "Euphorbia pulcherrima",
+    "commonName": "Poinsettia",
+    "scientificName": "Euphorbia pulcherrima",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Poinsettia (Euphorbia pulcherrima) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Peace lily",
+    "species": "Peace lily spp.",
+    "commonName": "Peace lily",
+    "scientificName": "Peace lily spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Peace lily (Peace lily spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Parlor Palm (Chamaedorea elegans)",
+    "species": "Chamaedorea elegans",
+    "commonName": "Parlor Palm",
+    "scientificName": "Chamaedorea elegans",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Parlor Palm (Chamaedorea elegans) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Orchid",
+    "species": "Orchid spp.",
+    "commonName": "Orchid",
+    "scientificName": "Orchid spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Orchid (Orchid spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Monstera Deliciosa (Monstera deliciosa)",
+    "species": "Monstera deliciosa",
+    "commonName": "Monstera Deliciosa",
+    "scientificName": "Monstera deliciosa",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Monstera Deliciosa (Monstera deliciosa) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Money Tree (Pachira aquatica)",
+    "species": "Pachira aquatica",
+    "commonName": "Money Tree",
+    "scientificName": "Pachira aquatica",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Money Tree (Pachira aquatica) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Lily of the valley (Convallaria majalis)",
+    "species": "Convallaria majalis",
+    "commonName": "Lily of the valley",
+    "scientificName": "Convallaria majalis",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Lily of the valley (Convallaria majalis) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Lilium (Hemerocallis)",
+    "species": "Hemerocallis",
+    "commonName": "Lilium",
+    "scientificName": "Hemerocallis",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Lilium (Hemerocallis) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Kalanchoe",
+    "species": "Kalanchoe spp.",
+    "commonName": "Kalanchoe",
+    "scientificName": "Kalanchoe spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Kalanchoe (Kalanchoe spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Jade plant (Crassula ovata)",
+    "species": "Crassula ovata",
+    "commonName": "Jade plant",
+    "scientificName": "Crassula ovata",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Jade plant (Crassula ovata) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Iron Cross begonia (Begonia masoniana)",
+    "species": "Begonia masoniana",
+    "commonName": "Iron Cross begonia",
+    "scientificName": "Begonia masoniana",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Iron Cross begonia (Begonia masoniana) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Hyacinth (Hyacinthus orientalis)",
+    "species": "Hyacinthus orientalis",
+    "commonName": "Hyacinth",
+    "scientificName": "Hyacinthus orientalis",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Hyacinth (Hyacinthus orientalis) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "English Ivy (Hedera helix)",
+    "species": "Hedera helix",
+    "commonName": "English Ivy",
+    "scientificName": "Hedera helix",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The English Ivy (Hedera helix) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Elephant Ear (Alocasia spp.)",
+    "species": "Alocasia spp.",
+    "commonName": "Elephant Ear",
+    "scientificName": "Alocasia spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Elephant Ear (Alocasia spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Dumb Cane (Dieffenbachia spp.)",
+    "species": "Dieffenbachia spp.",
+    "commonName": "Dumb Cane",
+    "scientificName": "Dieffenbachia spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Dumb Cane (Dieffenbachia spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Dracaena",
+    "species": "Dracaena spp.",
+    "commonName": "Dracaena",
+    "scientificName": "Dracaena spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Dracaena (Dracaena spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Daffodils (Narcissus spp.)",
+    "species": "Narcissus spp.",
+    "commonName": "Daffodils",
+    "scientificName": "Narcissus spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Daffodils (Narcissus spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Ctenanthe",
+    "species": "Ctenanthe spp.",
+    "commonName": "Ctenanthe",
+    "scientificName": "Ctenanthe spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Ctenanthe (Ctenanthe spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Chrysanthemum",
+    "species": "Chrysanthemum spp.",
+    "commonName": "Chrysanthemum",
+    "scientificName": "Chrysanthemum spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Chrysanthemum (Chrysanthemum spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Christmas Cactus (Schlumbergera bridgesii)",
+    "species": "Schlumbergera bridgesii",
+    "commonName": "Christmas Cactus",
+    "scientificName": "Schlumbergera bridgesii",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Christmas Cactus (Schlumbergera bridgesii) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Chinese evergreen (Aglaonema)",
+    "species": "Aglaonema",
+    "commonName": "Chinese evergreen",
+    "scientificName": "Aglaonema",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Chinese evergreen (Aglaonema) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Chinese Money Plant (Pilea peperomioides)",
+    "species": "Pilea peperomioides",
+    "commonName": "Chinese Money Plant",
+    "scientificName": "Pilea peperomioides",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Chinese Money Plant (Pilea peperomioides) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Cast Iron Plant (Aspidistra elatior)",
+    "species": "Aspidistra elatior",
+    "commonName": "Cast Iron Plant",
+    "scientificName": "Aspidistra elatior",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Cast Iron Plant (Aspidistra elatior) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Calathea",
+    "species": "Calathea spp.",
+    "commonName": "Calathea",
+    "scientificName": "Calathea spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Calathea (Calathea spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Boston Fern (Nephrolepis exaltata)",
+    "species": "Nephrolepis exaltata",
+    "commonName": "Boston Fern",
+    "scientificName": "Nephrolepis exaltata",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Boston Fern (Nephrolepis exaltata) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Birds Nest Fern (Asplenium nidus)",
+    "species": "Asplenium nidus",
+    "commonName": "Birds Nest Fern",
+    "scientificName": "Asplenium nidus",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Birds Nest Fern (Asplenium nidus) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Bird of Paradise (Strelitzia reginae)",
+    "species": "Strelitzia reginae",
+    "commonName": "Bird of Paradise",
+    "scientificName": "Strelitzia reginae",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Bird of Paradise (Strelitzia reginae) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Begonia (Begonia spp.)",
+    "species": "Begonia spp.",
+    "commonName": "Begonia",
+    "scientificName": "Begonia spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Begonia (Begonia spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Asparagus Fern (Asparagus setaceus)",
+    "species": "Asparagus setaceus",
+    "commonName": "Asparagus Fern",
+    "scientificName": "Asparagus setaceus",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Asparagus Fern (Asparagus setaceus) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Areca Palm (Dypsis lutescens)",
+    "species": "Dypsis lutescens",
+    "commonName": "Areca Palm",
+    "scientificName": "Dypsis lutescens",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Areca Palm (Dypsis lutescens) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Anthurium (Anthurium andraeanum)",
+    "species": "Anthurium andraeanum",
+    "commonName": "Anthurium",
+    "scientificName": "Anthurium andraeanum",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Anthurium (Anthurium andraeanum) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "Aloe Vera",
+    "species": "Aloe Vera spp.",
+    "commonName": "Aloe Vera",
+    "scientificName": "Aloe Vera spp.",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The Aloe Vera (Aloe Vera spp.) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  },
+  {
+    "id": "African Violet (Saintpaulia ionantha)",
+    "species": "Saintpaulia ionantha",
+    "commonName": "African Violet",
+    "scientificName": "Saintpaulia ionantha",
+    "family": "Unknown",
+    "wateringSchedule": {
+      "frequency": "Every 1-2 weeks",
+      "amount": "Moderate watering when top inch of soil is dry",
+      "notes": "Adjust based on light and humidity"
+    },
+    "careInstructions": {
+      "light": "Indirect sunlight",
+      "temperature": "18-24\u00b0C",
+      "humidity": "Moderate",
+      "fertilizer": "Monthly in growing season",
+      "pruning": "Remove dead or yellowing leaves"
+    },
+    "imageData": null,
+    "imageDigest": null,
+    "characteristics": {
+      "toxicToPets": false,
+      "airPurifying": true,
+      "flowering": false,
+      "nativeRegion": "Unknown"
+    },
+    "difficulty": "Moderate",
+    "description": "The African Violet (Saintpaulia ionantha) is a plant from the Unknown family. It thrives in Indirect sunlight and prefers temperatures around 18-24\u00b0C. Its ideal humidity is Moderate, and it benefits from Monthly in growing season fertilizer. Watering should be done Every 1-2 weeks with Moderate watering when top inch of soil is dry. Note: Adjust based on light and humidity. Pruning advice: Remove dead or yellowing leaves. Native to Unknown, this plant is non-toxic to pets, does not flower, and is an air-purifying plant. Overall care difficulty is rated as Moderate."
+  }
+]

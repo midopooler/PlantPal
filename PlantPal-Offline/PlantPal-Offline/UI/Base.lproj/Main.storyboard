@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wa1-l7-aKL">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="HkI-qj-JaW">
+            <objects>
+                <tabBarController id="Wa1-l7-aKL" customClass="TabBarController" customModule="PlantPal_Offline" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="0r2-of-Rtm"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="umc-5P-9Db">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ylr-0y-Pcf" kind="relationship" relationship="viewControllers" id="9eb-Q5-7bu"/>
+                        <segue destination="4Su-JE-03I" kind="relationship" relationship="viewControllers" id="XBe-5J-Q6e"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kgo-8J-CPH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-631" y="-251"/>
+        </scene>
+        <!--Search-->
+        <scene sceneID="aH1-uZ-A67">
+            <objects>
+                <navigationController hidesBarsWhenKeyboardAppears="YES" id="4Su-JE-03I" customClass="NavigationController" customModule="PlantPal_Offline" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Search" id="Him-xe-gJP">
+                        <imageReference key="image" image="magnifyingglass" catalog="system"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DMC-O7-GdV">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wTG-eq-G6h" kind="relationship" relationship="rootViewController" id="eMN-AB-vMd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVw-J0-0Ww" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="352" y="125"/>
+        </scene>
+        <!--AI-->
+        <scene sceneID="T1i-Ax-grE">
+            <objects>
+                <navigationController id="Ylr-0y-Pcf" customClass="NavigationController" customModule="PlantPal_Offline" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Plant Scan" image="leaf.fill" catalog="system" id="69y-rh-gpC"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IT5-1V-yi6">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="vyr-NJ-tVD" kind="relationship" relationship="rootViewController" id="FoH-MZ-u8k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="991-ue-Lfs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="352" y="-632"/>
+        </scene>
+        <!--Text View Controller-->
+        <scene sceneID="eSb-MY-Fsf">
+            <objects>
+                <viewController id="wTG-eq-G6h" customClass="TextViewController" customModule="PlantPal_Offline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uiL-L7-Scc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PEa-ZE-YZQ">
+                                <rect key="frame" x="8" y="103" width="377" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="AQD-0S-48A"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="search"/>
+                            </searchBar>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pAw-Pp-g7l" customClass="RecordsView" customModule="PlantPal_Offline" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="155" width="393" height="531.66666666666663"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f7N-GT-Eny">
+                                <rect key="frame" x="74.666666666666686" y="323" width="244" height="196"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search for plants by name or care needs" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f11-Pb-Eku">
+                                        <rect key="frame" x="20" y="118" width="204" height="58"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="la3-Xo-gSp">
+                                        <rect key="frame" x="72" y="21" width="101" height="98"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" systemColor="quaternaryLabelColor"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="light"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="244" id="uyd-Br-EbM"/>
+                                    <constraint firstAttribute="height" constant="196" id="veN-fE-9WE"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VdO-dD-YLk">
+                                <rect key="frame" x="16" y="702.66666666666663" width="361" height="50.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9s-kv-mjY">
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="50.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add to Bag" buttonSize="large"/>
+                                        <connections>
+                                            <action selector="addToBag:" destination="wTG-eq-G6h" eventType="touchUpInside" id="hJV-iB-l5f"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="zL2-6c-xad"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NDB-b4-Fqm"/>
+                        <keyboardLayoutGuide key="keyboard" id="Qg3-kQ-OgD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="VdO-dD-YLk" firstAttribute="top" secondItem="pAw-Pp-g7l" secondAttribute="bottom" constant="16" id="52A-jg-juL"/>
+                            <constraint firstItem="pAw-Pp-g7l" firstAttribute="top" secondItem="PEa-ZE-YZQ" secondAttribute="bottom" constant="8" id="Ccs-fl-h4W"/>
+                            <constraint firstItem="f7N-GT-Eny" firstAttribute="centerX" secondItem="pAw-Pp-g7l" secondAttribute="centerX" id="MQG-gA-c9S"/>
+                            <constraint firstItem="pAw-Pp-g7l" firstAttribute="leading" secondItem="NDB-b4-Fqm" secondAttribute="leading" id="O8G-Gn-kox"/>
+                            <constraint firstItem="VdO-dD-YLk" firstAttribute="bottom" secondItem="Qg3-kQ-OgD" secondAttribute="top" constant="-16" id="Vhv-Qm-Bxl"/>
+                            <constraint firstItem="pAw-Pp-g7l" firstAttribute="trailing" secondItem="NDB-b4-Fqm" secondAttribute="trailing" id="c5K-K8-I7J"/>
+                            <constraint firstItem="VdO-dD-YLk" firstAttribute="centerX" secondItem="uiL-L7-Scc" secondAttribute="centerX" id="cCs-Hd-mXO"/>
+                            <constraint firstItem="f7N-GT-Eny" firstAttribute="centerY" secondItem="pAw-Pp-g7l" secondAttribute="centerY" id="hpL-nq-ZOE"/>
+                            <constraint firstItem="PEa-ZE-YZQ" firstAttribute="leading" secondItem="NDB-b4-Fqm" secondAttribute="leading" constant="8" id="k8V-QN-6Rd"/>
+                            <constraint firstItem="PEa-ZE-YZQ" firstAttribute="trailing" secondItem="NDB-b4-Fqm" secondAttribute="trailing" constant="-8" id="q9o-d1-bS4"/>
+                            <constraint firstItem="PEa-ZE-YZQ" firstAttribute="top" secondItem="NDB-b4-Fqm" secondAttribute="top" id="w3c-4a-bko"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ih6-oI-Beo">
+                    </navigationItem>
+                    <connections>
+                        <outlet property="actionsView" destination="VdO-dD-YLk" id="54U-qN-aUT"/>
+                        <outlet property="actionsView_BottomConstraint" destination="Vhv-Qm-Bxl" id="wIv-f9-QFc"/>
+                        <outlet property="actionsView_WidthConstraint" destination="zL2-6c-xad" id="3ED-Zu-WHJ"/>
+                        <outlet property="addToBagButton" destination="r9s-kv-mjY" id="WQw-KS-6od"/>
+                        <outlet property="explainerView" destination="f7N-GT-Eny" id="OqY-lW-yOZ"/>
+
+                        <outlet property="recordsView" destination="pAw-Pp-g7l" id="wMa-q2-q8P"/>
+                        <outlet property="searchBar" destination="PEa-ZE-YZQ" id="01d-An-2ve"/>
+                        <outlet property="searchBar_TopConstraint" destination="w3c-4a-bko" id="iGy-S5-PGs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yTB-W9-XnQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1359.5419847328244" y="124.64788732394366"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="B1j-Fd-2NZ">
+            <objects>
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="vyr-NJ-tVD" customClass="CameraViewController" customModule="PlantPal_Offline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PP7-XP-PQf">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XRk-pX-bZd" customClass="RecordsView" customModule="PlantPal_Offline" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="103" width="393" height="583.66666666666663"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Look for plants around you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlantInstructionLabel">
+                                <rect key="frame" x="50" y="520" width="293" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="white" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uH8-xx-3Hw">
+                                <rect key="frame" x="11" y="287" width="370" height="216"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Camera access is not enabled. To use the visual search feature, enable camera access in device settings." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsM-P6-JXE">
+                                        <rect key="frame" x="19" y="119" width="330" height="78"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="info.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="xmI-eE-ort">
+                                        <rect key="frame" x="135" y="22" width="100" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="light"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1zY-YC-9Tz">
+                                <rect key="frame" x="16" y="702.66666666666663" width="361" height="50.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUn-zD-j2j">
+                                        <rect key="frame" x="0.0" y="0.0" width="92.666666666666671" height="50.333333333333336"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Cancel" buttonSize="large"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="vyr-NJ-tVD" eventType="touchUpInside" id="lR0-YD-aHh"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1v7-fc-oU7">
+                                        <rect key="frame" x="100.66666666666669" y="0.0" width="132" height="50.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add to Bag" buttonSize="large"/>
+                                        <connections>
+                                            <action selector="addToBag:" destination="vyr-NJ-tVD" eventType="touchUpInside" id="7hF-Bh-Cbq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xhz-kO-fBS">
+                                        <rect key="frame" x="180.66666666666671" y="0.0" width="80.33333333333334" height="50.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Done" buttonSize="large"/>
+                                        <connections>
+                                            <action selector="cancel:" destination="vyr-NJ-tVD" eventType="touchUpInside" id="XtP-us-fRq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PlantChatButton">
+                                        <rect key="frame" x="269" y="0.0" width="92" height="50.333333333333336"/>
+                                        <color key="tintColor" systemColor="systemBlueColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Chat" buttonSize="large"/>
+                                        <connections>
+                                            <action selector="openPlantChat:" destination="vyr-NJ-tVD" eventType="touchUpInside" id="PlantChatAction"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="361" id="1SA-TW-aGO"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YeZ-O4-ITi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XRk-pX-bZd" firstAttribute="leading" secondItem="YeZ-O4-ITi" secondAttribute="leading" id="7Se-gn-4cd"/>
+                            <constraint firstItem="XRk-pX-bZd" firstAttribute="trailing" secondItem="YeZ-O4-ITi" secondAttribute="trailing" id="7cD-7V-GIq"/>
+                            <constraint firstItem="1zY-YC-9Tz" firstAttribute="bottom" secondItem="YeZ-O4-ITi" secondAttribute="bottom" constant="-16" id="89l-FW-7Ke"/>
+                            <constraint firstItem="XRk-pX-bZd" firstAttribute="top" secondItem="YeZ-O4-ITi" secondAttribute="top" id="iHv-z0-Dgs"/>
+                            <constraint firstItem="1zY-YC-9Tz" firstAttribute="centerX" secondItem="PP7-XP-PQf" secondAttribute="centerX" id="u1A-Sb-gVB"/>
+                            <constraint firstItem="XRk-pX-bZd" firstAttribute="bottom" secondItem="1zY-YC-9Tz" secondAttribute="top" constant="-16" id="zk6-xC-0E6"/>
+                            <constraint firstItem="PlantInstructionLabel" firstAttribute="centerX" secondItem="PP7-XP-PQf" secondAttribute="centerX" id="PlantLabel-CenterX"/>
+                            <constraint firstItem="PlantInstructionLabel" firstAttribute="bottom" secondItem="1zY-YC-9Tz" secondAttribute="top" constant="-80" id="PlantLabel-Bottom"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="VQV-DB-SRu">
+                    </navigationItem>
+                    <connections>
+                        <outlet property="actionsView" destination="1zY-YC-9Tz" id="5WY-fD-ESm"/>
+                        <outlet property="actionsView_BottomConstraint" destination="89l-FW-7Ke" id="ut5-tq-jhF"/>
+                        <outlet property="actionsView_WidthConstraint" destination="1SA-TW-aGO" id="5A5-TK-pvJ"/>
+                        <outlet property="addToBagButton" destination="1v7-fc-oU7" id="xvm-eA-Y0N"/>
+                        <outlet property="cancelButton" destination="JUn-zD-j2j" id="Bj3-H5-Sjo"/>
+                        <outlet property="chatButton" destination="PlantChatButton" id="ChatButtonOutlet"/>
+                        <outlet property="doneButton" destination="Xhz-kO-fBS" id="MgJ-YJ-gm1"/>
+                        <outlet property="explainerView" destination="uH8-xx-3Hw" id="pd6-Nx-LCY"/>
+
+                        <outlet property="recordsView" destination="XRk-pX-bZd" id="LBk-dW-tGT"/>
+                        <outlet property="plantInstructionLabel" destination="PlantInstructionLabel" id="PlantLabel-Outlet"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="quQ-rD-AA4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1359.5419847328244" y="-632.3943661971831"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="5b5-kl-yat">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="L55-Gn-knP" customClass="LoginViewController" customModule="PlantPal_Offline" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e9V-CD-dCe">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0Dt-iu-mvH" userLabel="Banner">
+                                <rect key="frame" x="24" y="274.33333333333337" width="345" height="303.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fdr-30-aBf" userLabel="Header">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="152.66666666666666"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="leaf.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8jS-XZ-sec" userLabel="Icon">
+                                                <rect key="frame" x="0.0" y="1" width="345" height="78.333333333333329"/>
+                                                <color key="tintColor" systemColor="labelColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="JbC-0O-poh"/>
+                                                </constraints>
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="light"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Q4f-IV-cpE" userLabel="Title">
+                                                <rect key="frame" x="0.0" y="80" width="345" height="72.666666666666686"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant Care Assistant" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeF-ia-yBD">
+                                                        <rect key="frame" x="0.0" y="0.0" width="345" height="36"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AI-Powered Plant Recognition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBF-Pu-dSH">
+                                                        <rect key="frame" x="0.0" y="44" width="345" height="28.666666666666671"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="R7b-GE-GJ8" userLabel="Actions">
+                                        <rect key="frame" x="0.0" y="202.66666666666669" width="345" height="100.66666666666669"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PlantProgressView">
+                                                <rect key="frame" x="0.0" y="0.0" width="345" height="4"/>
+                                            </progressView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading plant database..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlantProgressLabel">
+                                                <rect key="frame" x="0.0" y="12" width="345" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qiZ-NC-X8U">
+                                                <rect key="frame" x="0.0" y="40.5" width="345" height="50.333333333333336"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Try Now →" buttonSize="large"/>
+                                                <connections>
+                                                    <action selector="tryNow:" destination="L55-Gn-knP" eventType="touchUpInside" id="yya-xK-uqQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="345" id="LXG-c7-Swf"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="U6d-u4-WZ7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0Dt-iu-mvH" firstAttribute="centerX" secondItem="e9V-CD-dCe" secondAttribute="centerX" id="JUV-H3-kGy"/>
+                            <constraint firstItem="0Dt-iu-mvH" firstAttribute="centerY" secondItem="e9V-CD-dCe" secondAttribute="centerY" id="pZM-Wx-09x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressLabel" destination="PlantProgressLabel" id="PlantProgressLabel-Outlet"/>
+                        <outlet property="progressView" destination="PlantProgressView" id="PlantProgressView-Outlet"/>
+                        <outlet property="tryNowButton" destination="qiZ-NC-X8U" id="TryNowButton-Outlet"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EWQ-d8-ftE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1616" y="-251"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="leaf.fill" catalog="system" width="128" height="117"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="quaternaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.17647058823529413" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

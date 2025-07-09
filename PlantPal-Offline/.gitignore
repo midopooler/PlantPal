@@ -1,0 +1,14 @@
+**/*.DS_Store
+
+# Ignore Couchbase Lite framework
+**/CouchbaseLiteSwift.xcframework
+**/CouchbaseLiteVectorSearch.xcframework
+
+# Ignore everything in the xcuserdata directory
+xcuserdata/
+
+# Ignore everything in the gen-credentials directory
+/gen-credentials/*
+# But do not ignore .sh and .cnf files in gen-credentials
+!/gen-credentials/*.sh
+!/gen-credentials/*.cnf

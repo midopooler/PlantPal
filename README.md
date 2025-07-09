@@ -20,6 +20,7 @@ See PlantPal in action:
     </td>
   </tr>
 </table>
+
 # Try the Demo
 
 The app includes a comprehensive plant database that enables experiencing vector search and AI features without any setup:

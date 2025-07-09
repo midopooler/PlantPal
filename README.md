@@ -8,13 +8,18 @@ This plant identification app provides an excellent reference for developers loo
 
 See PlantPal in action:
 
-### Plant Identification
-<img src="Demo-videos/ScreenRecording_07-03-2025 13-31-08_1.gif" alt="PlantPal Plant Identification Demo" width="300"/>
-
-
-### Plant Care Chat
-<img src="Demo-videos/ScreenRecording_07-02-2025 18-27-46_1.gif" alt="PlantPal Plant Care Chat Demo" width="300"/>
-
+<table>
+  <tr>
+    <td align="center">
+      <h3>Plant Identification</h3>
+      <img src="Demo-videos/ScreenRecording_07-03-2025 13-31-08_1.gif" alt="PlantPal Plant Identification Demo" width="300"/>
+    </td>
+    <td align="center">
+      <h3>Plant Care Chat</h3>
+      <img src="Demo-videos/ScreenRecording_07-02-2025 18-27-46_1.gif" alt="PlantPal Plant Care Chat Demo" width="300"/>
+    </td>
+  </tr>
+</table>
 # Try the Demo
 
 The app includes a comprehensive plant database that enables experiencing vector search and AI features without any setup:

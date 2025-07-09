@@ -4,6 +4,16 @@ PlantPal showcases advanced vector search capabilities using [Couchbase Capella]
 
 This plant identification app provides an excellent reference for developers looking to implement vector search, AI embeddings, and intelligent chat features in their iOS applications using Couchbase's powerful search and sync capabilities.
 
+## Demo
+
+See PlantPal in action:
+
+### Plant Identification
+<img src="Demo-videos/ScreenRecording_07-02-2025 18-27-46_1.gif" alt="PlantPal Plant Identification Demo" width="300"/>
+
+### Plant Care Chat
+<img src="Demo-videos/ScreenRecording_07-03-2025 13-31-08_1.gif" alt="PlantPal Plant Care Chat Demo" width="300"/>
+
 # Try the Demo
 
 The app includes a comprehensive plant database that enables experiencing vector search and AI features without any setup:

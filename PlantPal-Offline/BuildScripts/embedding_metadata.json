@@ -1,0 +1,331 @@
+[
+  {
+    "name" : "African Violet",
+    "imageDigest" : "1200x800_2488130904",
+    "plantId" : "african_violet",
+    "embeddingSize" : 512,
+    "scientificName" : "Saintpaulia ionantha"
+  },
+  {
+    "imageDigest" : "1920x1280_3739576717",
+    "plantId" : "aloe_vera",
+    "embeddingSize" : 512,
+    "scientificName" : "",
+    "name" : "Aloe Vera"
+  },
+  {
+    "imageDigest" : "1600x1157_978700009",
+    "embeddingSize" : 512,
+    "name" : "Anthurium",
+    "scientificName" : "Anthurium andraeanum",
+    "plantId" : "anthurium"
+  },
+  {
+    "plantId" : "areca_palm",
+    "scientificName" : "Dypsis lutescens",
+    "name" : "Areca Palm",
+    "imageDigest" : "2344x3236_999674740",
+    "embeddingSize" : 512
+  },
+  {
+    "name" : "Asparagus Fern",
+    "scientificName" : "Asparagus setaceus",
+    "imageDigest" : "720x660_3233540091",
+    "plantId" : "asparagus_fern",
+    "embeddingSize" : 512
+  },
+  {
+    "scientificName" : "Begonia spp.",
+    "embeddingSize" : 512,
+    "plantId" : "begonia",
+    "name" : "Begonia",
+    "imageDigest" : "2000x2000_2071698648"
+  },
+  {
+    "name" : "Bird of Paradise",
+    "imageDigest" : "720x960_1398051384",
+    "scientificName" : "Strelitzia reginae",
+    "embeddingSize" : 512,
+    "plantId" : "bird_of_paradise"
+  },
+  {
+    "scientificName" : "Asplenium nidus",
+    "plantId" : "birds_nest_fern",
+    "name" : "Birds Nest Fern",
+    "imageDigest" : "1024x768_1793532367",
+    "embeddingSize" : 512
+  },
+  {
+    "name" : "Boston Fern",
+    "plantId" : "boston_fern",
+    "scientificName" : "Nephrolepis exaltata",
+    "imageDigest" : "1599x1201_4089908436",
+    "embeddingSize" : 512
+  },
+  {
+    "name" : "Calathea",
+    "embeddingSize" : 512,
+    "plantId" : "calathea",
+    "imageDigest" : "1140x1377_3651950989",
+    "scientificName" : ""
+  },
+  {
+    "plantId" : "cast_iron_plant",
+    "name" : "Cast Iron Plant",
+    "imageDigest" : "992x793_3262232518",
+    "scientificName" : "Aspidistra elatior",
+    "embeddingSize" : 512
+  },
+  {
+    "imageDigest" : "2000x2667_1249320748",
+    "embeddingSize" : 512,
+    "plantId" : "chinese_money_plant",
+    "name" : "Chinese Money Plant",
+    "scientificName" : "Pilea peperomioides"
+  },
+  {
+    "imageDigest" : "1512x2016_3334062295",
+    "name" : "Chinese evergreen",
+    "scientificName" : "Aglaonema",
+    "embeddingSize" : 512,
+    "plantId" : "chinese_evergreen"
+  },
+  {
+    "plantId" : "christmas_cactus",
+    "embeddingSize" : 512,
+    "scientificName" : "Schlumbergera bridgesii",
+    "name" : "Christmas Cactus",
+    "imageDigest" : "680x540_3193491448"
+  },
+  {
+    "plantId" : "chrysanthemum",
+    "embeddingSize" : 512,
+    "scientificName" : "",
+    "imageDigest" : "1638x2048_3166772361",
+    "name" : "Chrysanthemum"
+  },
+  {
+    "plantId" : "ctenanthe",
+    "scientificName" : "",
+    "imageDigest" : "1000x1500_1372194018",
+    "embeddingSize" : 512,
+    "name" : "Ctenanthe"
+  },
+  {
+    "embeddingSize" : 512,
+    "scientificName" : "Narcissus spp.",
+    "imageDigest" : "1600x1442_3782371332",
+    "plantId" : "daffodils",
+    "name" : "Daffodils"
+  },
+  {
+    "name" : "Dracaena",
+    "scientificName" : "",
+    "imageDigest" : "758x900_442460332",
+    "embeddingSize" : 512,
+    "plantId" : "dracaena"
+  },
+  {
+    "embeddingSize" : 512,
+    "name" : "Dumb Cane",
+    "imageDigest" : "1140x1481_3422127676",
+    "plantId" : "dumb_cane",
+    "scientificName" : "Dieffenbachia spp."
+  },
+  {
+    "name" : "Elephant Ear",
+    "scientificName" : "Alocasia spp.",
+    "embeddingSize" : 512,
+    "plantId" : "elephant_ear",
+    "imageDigest" : "735x778_1171722143"
+  },
+  {
+    "name" : "English Ivy",
+    "embeddingSize" : 512,
+    "plantId" : "english_ivy",
+    "scientificName" : "Hedera helix",
+    "imageDigest" : "1500x2000_1912983126"
+  },
+  {
+    "imageDigest" : "800x800_1811126925",
+    "plantId" : "hyacinth",
+    "name" : "Hyacinth",
+    "scientificName" : "Hyacinthus orientalis",
+    "embeddingSize" : 512
+  },
+  {
+    "plantId" : "iron_cross_begonia",
+    "name" : "Iron Cross begonia",
+    "scientificName" : "Begonia masoniana",
+    "imageDigest" : "800x534_3854710040",
+    "embeddingSize" : 512
+  },
+  {
+    "name" : "Jade plant",
+    "embeddingSize" : 512,
+    "plantId" : "jade_plant",
+    "scientificName" : "Crassula ovata",
+    "imageDigest" : "800x800_3210884535"
+  },
+  {
+    "name" : "Kalanchoe",
+    "plantId" : "kalanchoe",
+    "embeddingSize" : 512,
+    "imageDigest" : "1280x960_110490623",
+    "scientificName" : ""
+  },
+  {
+    "imageDigest" : "1600x2400_807090501",
+    "plantId" : "lilium",
+    "name" : "Lilium",
+    "embeddingSize" : 512,
+    "scientificName" : "Hemerocallis"
+  },
+  {
+    "plantId" : "lily_of_the_valley",
+    "name" : "Lily of the valley",
+    "imageDigest" : "2560x1600_210665538",
+    "embeddingSize" : 512,
+    "scientificName" : "Convallaria majalis"
+  },
+  {
+    "name" : "Money Tree",
+    "embeddingSize" : 512,
+    "scientificName" : "Pachira aquatica",
+    "imageDigest" : "963x1156_980633720",
+    "plantId" : "money_tree"
+  },
+  {
+    "imageDigest" : "1500x1500_511454694",
+    "plantId" : "monstera_deliciosa",
+    "embeddingSize" : 512,
+    "name" : "Monstera Deliciosa",
+    "scientificName" : "Monstera deliciosa"
+  },
+  {
+    "scientificName" : "",
+    "name" : "Orchid",
+    "embeddingSize" : 512,
+    "imageDigest" : "1402x1600_475574603",
+    "plantId" : "orchid"
+  },
+  {
+    "name" : "Parlor Palm",
+    "scientificName" : "Chamaedorea elegans",
+    "plantId" : "parlor_palm",
+    "imageDigest" : "1920x2560_3233257379",
+    "embeddingSize" : 512
+  },
+  {
+    "name" : "Peace lily",
+    "scientificName" : "",
+    "imageDigest" : "735x980_4218707742",
+    "plantId" : "peace_lily",
+    "embeddingSize" : 512
+  },
+  {
+    "plantId" : "poinsettia",
+    "name" : "Poinsettia",
+    "embeddingSize" : 512,
+    "imageDigest" : "800x800_4101922023",
+    "scientificName" : "Euphorbia pulcherrima"
+  },
+  {
+    "embeddingSize" : 512,
+    "plantId" : "polka_dot_plant",
+    "name" : "Polka Dot Plant",
+    "imageDigest" : "768x1024_1246501844",
+    "scientificName" : "Hypoestes phyllostachya"
+  },
+  {
+    "name" : "Ponytail Palm",
+    "embeddingSize" : 512,
+    "imageDigest" : "704x1000_3125305950",
+    "plantId" : "ponytail_palm",
+    "scientificName" : "Beaucarnea recurvata"
+  },
+  {
+    "name" : "Pothos",
+    "plantId" : "pothos",
+    "scientificName" : "Ivy arum",
+    "embeddingSize" : 512,
+    "imageDigest" : "1140x1372_1454076434"
+  },
+  {
+    "plantId" : "prayer_plant",
+    "scientificName" : "Maranta leuconeura",
+    "name" : "Prayer Plant",
+    "embeddingSize" : 512,
+    "imageDigest" : "1600x1067_3187819318"
+  },
+  {
+    "imageDigest" : "1280x720_3486040289",
+    "embeddingSize" : 512,
+    "scientificName" : "Calathea lancifolia",
+    "name" : "Rattlesnake Plant",
+    "plantId" : "rattlesnake_plant"
+  },
+  {
+    "scientificName" : "Ficus elastica",
+    "plantId" : "rubber_plant",
+    "name" : "Rubber Plant",
+    "imageDigest" : "3024x4032_2610497371",
+    "embeddingSize" : 512
+  },
+  {
+    "imageDigest" : "2654x3253_1602741486",
+    "embeddingSize" : 512,
+    "scientificName" : "Cycas revoluta",
+    "plantId" : "sago_palm",
+    "name" : "Sago Palm"
+  },
+  {
+    "imageDigest" : "933x933_2529128617",
+    "plantId" : "schefflera",
+    "name" : "Schefflera",
+    "scientificName" : "",
+    "embeddingSize" : 512
+  },
+  {
+    "scientificName" : "Sanseviera",
+    "embeddingSize" : 512,
+    "name" : "Snake plant",
+    "imageDigest" : "794x1059_1307278299",
+    "plantId" : "snake_plant"
+  },
+  {
+    "name" : "Tradescantia",
+    "plantId" : "tradescantia",
+    "scientificName" : "",
+    "imageDigest" : "1280x720_119086234",
+    "embeddingSize" : 512
+  },
+  {
+    "name" : "Tulip",
+    "scientificName" : "",
+    "embeddingSize" : 512,
+    "plantId" : "tulip",
+    "imageDigest" : "4288x2848_896067551"
+  },
+  {
+    "embeddingSize" : 512,
+    "name" : "Venus Flytrap",
+    "scientificName" : "",
+    "plantId" : "venus_flytrap",
+    "imageDigest" : "404x499_1002561778"
+  },
+  {
+    "scientificName" : "",
+    "imageDigest" : "2736x3648_538110767",
+    "embeddingSize" : 512,
+    "plantId" : "yucca",
+    "name" : "Yucca"
+  },
+  {
+    "name" : "ZZ Plant",
+    "embeddingSize" : 512,
+    "scientificName" : "Zamioculcas zamiifolia",
+    "imageDigest" : "2560x1704_3218585026",
+    "plantId" : "zz_plant"
+  }
+]

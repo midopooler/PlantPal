@@ -4,10 +4,149 @@ import Foundation
 import CoreML
 import CoreImage
 import CoreGraphics
-import Vision
+// import Vision // Replaced with MobileCLIP
 
 // MARK: - Build-Time Embedding Generator
 // This script runs during Xcode build to pre-compute vector embeddings
+
+// MARK: - MobileCLIP Integration for Build Scripts
+
+class BuildTimeMobileCLIP {
+    private var imageModel: MLModel?
+    private let modelName = "mobileclip_s1_image"
+    
+    init() throws {
+        try loadModel()
+    }
+    
+    private func loadModel() throws {
+        // Look for model in the models directory
+        let modelURL = URL(fileURLWithPath: "../PlantPal-Offline/models/\(modelName).mlpackage")
+        
+        guard FileManager.default.fileExists(atPath: modelURL.path) else {
+            throw EmbeddingError.modelNotFound
+        }
+        
+        print("🔨 Compiling MobileCLIP model...")
+        let compiledModelURL = try MLModel.compileModel(at: modelURL)
+        
+        let configuration = MLModelConfiguration()
+        configuration.computeUnits = .all
+        imageModel = try MLModel(contentsOf: compiledModelURL, configuration: configuration)
+        print("✅ Loaded and compiled MobileCLIP model for build-time generation")
+    }
+    
+    func generateEmbedding(for cgImage: CGImage) throws -> [Float] {
+        guard let model = imageModel else {
+            throw EmbeddingError.modelNotLoaded
+        }
+        
+        // Preprocess image for MobileCLIP (256x256)
+        let scaledImage = fit(cgImage: cgImage, to: CGSize(width: 256, height: 256))
+        guard let pixelBuffer = createPixelBuffer(from: scaledImage) else {
+            throw EmbeddingError.preprocessingFailed
+        }
+        
+        do {
+            let input = try MLDictionaryFeatureProvider(dictionary: ["image": MLFeatureValue(pixelBuffer: pixelBuffer)])
+            let output = try model.prediction(from: input)
+            
+            // Output features available: final_emb_1
+            
+            guard let embeddingArray = output.featureValue(for: "final_emb_1")?.multiArrayValue else {
+                print("❌ Could not find 'final_emb_1' in model outputs")
+                throw EmbeddingError.embeddingExtractionFailed
+            }
+            
+            let embedding = convertMLMultiArrayToFloat(embeddingArray)
+            
+            if embedding.count != 512 {
+                print("⚠️ Unexpected embedding dimension: \(embedding.count), expected 512")
+            }
+            
+            return embedding
+            
+        } catch {
+            print("❌ MobileCLIP inference error: \(error)")
+            throw EmbeddingError.embeddingExtractionFailed
+        }
+    }
+    
+    private func createPixelBuffer(from cgImage: CGImage) -> CVPixelBuffer? {
+        // MobileCLIP requires exactly 256x256 pixels
+        let width = 256
+        let height = 256
+        
+        let attributes: [String: Any] = [
+            kCVPixelBufferCGImageCompatibilityKey as String: true,
+            kCVPixelBufferCGBitmapContextCompatibilityKey as String: true
+        ]
+        
+        var pixelBuffer: CVPixelBuffer?
+        let status = CVPixelBufferCreate(
+            kCFAllocatorDefault,
+            width,
+            height,
+            kCVPixelFormatType_32ARGB,
+            attributes as CFDictionary,
+            &pixelBuffer
+        )
+        
+        guard status == kCVReturnSuccess, let buffer = pixelBuffer else {
+            return nil
+        }
+        
+        CVPixelBufferLockBaseAddress(buffer, CVPixelBufferLockFlags(rawValue: 0))
+        defer { CVPixelBufferUnlockBaseAddress(buffer, CVPixelBufferLockFlags(rawValue: 0)) }
+        
+        let pixelData = CVPixelBufferGetBaseAddress(buffer)
+        let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
+        
+        guard let context = CGContext(
+            data: pixelData,
+            width: width,
+            height: height,
+            bitsPerComponent: 8,
+            bytesPerRow: CVPixelBufferGetBytesPerRow(buffer),
+            space: rgbColorSpace,
+            bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue
+        ) else {
+            return nil
+        }
+        
+        // Scale the image to fit exactly 256x256
+        context.draw(cgImage, in: CGRect(x: 0, y: 0, width: 256, height: 256))
+        return buffer
+    }
+    
+    private func convertMLMultiArrayToFloat(_ multiArray: MLMultiArray) -> [Float] {
+        let count = multiArray.count
+        let dataPointer = multiArray.dataPointer.bindMemory(to: Float.self, capacity: count)
+        return Array(UnsafeBufferPointer(start: dataPointer, count: count))
+    }
+    
+    private func fit(cgImage: CGImage, to size: CGSize) -> CGImage {
+        let imageSize = CGSize(width: cgImage.width, height: cgImage.height)
+        let scaleFactor = min(size.width / imageSize.width, size.height / imageSize.height)
+        let newSize = CGSize(width: imageSize.width * scaleFactor, height: imageSize.height * scaleFactor)
+        
+        let context = CGContext(
+            data: nil,
+            width: Int(size.width),
+            height: Int(size.height),
+            bitsPerComponent: cgImage.bitsPerComponent,
+            bytesPerRow: 0,
+            space: cgImage.colorSpace ?? CGColorSpaceCreateDeviceRGB(),
+            bitmapInfo: cgImage.bitmapInfo.rawValue
+        )
+        
+        let offsetX = (size.width - newSize.width) / 2
+        let offsetY = (size.height - newSize.height) / 2
+        context?.draw(cgImage, in: CGRect(x: offsetX, y: offsetY, width: newSize.width, height: newSize.height))
+        
+        return context?.makeImage() ?? cgImage
+    }
+}
 
 struct PlantEmbedding: Codable {
     let plantId: String
@@ -18,150 +157,110 @@ struct PlantEmbedding: Codable {
 }
 
 struct EmbeddingGenerator {
+    private let mobileCLIP: BuildTimeMobileCLIP
+    
     init() throws {
-        // No initialization needed for Vision framework
+        mobileCLIP = try BuildTimeMobileCLIP()
     }
     
     func generateEmbeddingsFromPlantData() throws {
-        print("🌱 Starting build-time embedding generation...")
+        print("🌱 Starting build-time embedding generation from dataset folder...")
         
-        // Load plant data from the project directory
-        guard let data = try? Data(contentsOf: URL(fileURLWithPath: "demo-data.json")),
-              let plantsArray = try? JSONSerialization.jsonObject(with: data) as? [[String: Any]] else {
+        // Read plant images directly from dataset folder
+        let datasetPath = "../PlantPal-Offline/dataset"
+        let datasetURL = URL(fileURLWithPath: datasetPath)
+        
+        guard let imageFiles = try? FileManager.default.contentsOfDirectory(at: datasetURL, includingPropertiesForKeys: nil, options: [.skipsHiddenFiles]) else {
+            print("❌ Could not read dataset folder at: \(datasetPath)")
             throw EmbeddingError.dataLoadFailed
         }
         
+        let imageExtensions = Set(["jpg", "jpeg", "png", "JPG", "JPEG", "PNG"])
+        let validImageFiles = imageFiles.filter { url in
+            imageExtensions.contains(url.pathExtension)
+        }.sorted { $0.lastPathComponent < $1.lastPathComponent }
+        
+        print("📁 Found \(validImageFiles.count) plant images in dataset")
         var embeddings: [PlantEmbedding] = []
         
-        for (index, plantData) in plantsArray.enumerated() {
-            guard let plantType = plantData["type"] as? String,
-                  plantType == "plant",
-                  let plantId = plantData["id"] as? String,
-                  let name = plantData["name"] as? String,
-                  let imagePath = plantData["image"] as? String else {
+        for (index, imageURL) in validImageFiles.enumerated() {
+            let filename = imageURL.lastPathComponent
+            
+            // Extract plant name and scientific name from filename
+            // Format: "Plant Name (Scientific name).jpg"
+            let nameWithoutExtension = imageURL.deletingPathExtension().lastPathComponent
+            let (plantName, scientificName) = parseFilename(nameWithoutExtension)
+            
+            print("Processing \(index + 1)/\(validImageFiles.count): \(plantName)")
+            
+            // Load and process image
+            guard let imageData = try? Data(contentsOf: imageURL),
+                  let cgImage = loadCGImage(from: imageData) else {
+                print("⚠️  Could not load image: \(filename)")
                 continue
             }
             
-            print("Processing \(index + 1)/\(plantsArray.count): \(name)")
-            
-            // Load image from assets
-            let imageName = imagePath.replacingOccurrences(of: "demo-images/", with: "")
-            guard let image = loadImage(named: imageName) else {
-                print("⚠️  Could not load image for \(name)")
-                continue
-            }
-            
-            // Generate embedding
-            if let embedding = try? generateEmbedding(for: image) {
+            // Generate embedding using MobileCLIP
+            do {
+                let embedding = try mobileCLIP.generateEmbedding(for: cgImage)
+                let plantId = plantName.lowercased().replacingOccurrences(of: " ", with: "_")
+                
                 let plantEmbedding = PlantEmbedding(
                     plantId: plantId,
-                    name: name,
-                    scientificName: plantData["scientificName"] as? String,
+                    name: plantName,
+                    scientificName: scientificName,
                     embedding: embedding,
-                    imageDigest: generateImageDigest(for: image)
+                    imageDigest: generateImageDigest(for: cgImage)
                 )
                 embeddings.append(plantEmbedding)
-                print("✅ Generated embedding for \(name) (768 dimensions)")
-            } else {
-                print("❌ Failed to generate embedding for \(name)")
+                print("✅ Generated embedding for \(plantName) (512 dimensions)")
+            } catch {
+                print("❌ Failed to generate embedding for \(plantName): \(error)")
             }
         }
         
         // Save embeddings to bundle
         try saveEmbeddings(embeddings)
-        print("🎉 Generated \(embeddings.count) embeddings successfully!")
+        print("🎉 Generated \(embeddings.count) embeddings from dataset successfully!")
     }
     
-    private func generateEmbedding(for image: CGImage) throws -> [Float] {
-        // Scale down the image to speed up processing (same as AI.swift)
-        let scaledImage = fit(cgImage: image, to: CGSize(width: 100, height: 100))
-        
-        // Perform feature detection using Vision framework
-        let request = VNGenerateImageFeaturePrintRequest()
-        let handler = VNImageRequestHandler(cgImage: scaledImage, options: [:])
-
-        do {
-            try handler.perform([request])
-        } catch {
-            throw EmbeddingError.embeddingExtractionFailed
+    private func parseFilename(_ filename: String) -> (plantName: String, scientificName: String?) {
+        // Parse format: "Plant Name (Scientific name)" or just "Plant Name"
+        if let parenIndex = filename.firstIndex(of: "("),
+           let closeParenIndex = filename.firstIndex(of: ")") {
+            let plantName = String(filename[..<parenIndex]).trimmingCharacters(in: .whitespaces)
+            let scientificName = String(filename[filename.index(after: parenIndex)..<closeParenIndex])
+            return (plantName, scientificName)
+        } else {
+            return (filename, nil)
         }
-        
-        guard let observation = request.results?.first as? VNFeaturePrintObservation else {
-            throw EmbeddingError.embeddingExtractionFailed
-        }
-
-        // Access the feature data
-        let data = observation.data
-        guard data.isEmpty == false else {
-            throw EmbeddingError.embeddingExtractionFailed
-        }
-
-        // Determine the element type and size
-        let elementType = observation.elementType
-        let elementCount = observation.elementCount
-        let typeSize = VNElementTypeSize(elementType)
-        var embedding: [Float]?
-        
-        // Handle the different element types (same as AI.swift)
-        switch elementType {
-        case .float where typeSize == MemoryLayout<Float>.size:
-            data.withUnsafeBytes { (bytes: UnsafeRawBufferPointer) in
-                let buffer = bytes.bindMemory(to: Float.self)
-                if buffer.count == elementCount {
-                    embedding = buffer.map { $0 }
-                }
-            }
-        default:
-            throw EmbeddingError.embeddingExtractionFailed
-        }
-
-        guard let embedding = embedding else {
-            throw EmbeddingError.embeddingExtractionFailed
-        }
-        
-        return embedding
     }
     
-    private func fit(cgImage: CGImage, to size: CGSize) -> CGImage {
-        let imageSize = CGSize(width: cgImage.width, height: cgImage.height)
-        let scaleFactor = min(size.width / imageSize.width, size.height / imageSize.height)
-        let newSize = CGSize(width: imageSize.width * scaleFactor, height: imageSize.height * scaleFactor)
-        
-        let context = CGContext(
-            data: nil,
-            width: Int(newSize.width),
-            height: Int(newSize.height),
-            bitsPerComponent: cgImage.bitsPerComponent,
-            bytesPerRow: 0,
-            space: cgImage.colorSpace ?? CGColorSpaceCreateDeviceRGB(),
-            bitmapInfo: cgImage.bitmapInfo.rawValue
-        )
-        
-        context?.draw(cgImage, in: CGRect(origin: .zero, size: newSize))
-        
-        return context?.makeImage() ?? cgImage
+    private func loadCGImage(from data: Data) -> CGImage? {
+        guard let imageSource = CGImageSourceCreateWithData(data as CFData, nil),
+              let cgImage = CGImageSourceCreateImageAtIndex(imageSource, 0, nil) else {
+            return nil
+        }
+        return cgImage
     }
+    
+    // Vision-based embedding generation removed - now using MobileCLIP via BuildTimeMobileCLIP class
+    
+    // fit function moved to BuildTimeMobileCLIP class
     
     private func loadImage(named: String) -> CGImage? {
-        // Look for the image in the Assets.xcassets/demo-images structure
-        let imageSetPath = "Assets.xcassets/demo-images/\(named).imageset"
-        let imagePath = "\(imageSetPath)/\(named).jpg"
+        // Since demo images don't exist, use the app icon as a test image
+        // This will generate valid 512-dimensional embeddings for testing
+        let iconPath = "../PlantPal-Offline/Assets.xcassets/AppIcon.appiconset/image (1).png"
         
-        // Try to load from the file system directly
-        if let imageData = NSData(contentsOfFile: imagePath),
+        if let imageData = NSData(contentsOfFile: iconPath),
            let dataProvider = CGDataProvider(data: imageData),
-           let image = CGImage(jpegDataProviderSource: dataProvider, decode: nil, shouldInterpolate: false, intent: .defaultIntent) {
+           let image = CGImage(pngDataProviderSource: dataProvider, decode: nil, shouldInterpolate: false, intent: .defaultIntent) {
+            print("📱 Using app icon as test image for \(named)")
             return image
         }
         
-        // Also try without .jpg extension in case it's named differently
-        let altImagePath = "\(imageSetPath)/\(named)"
-        if let imageData = NSData(contentsOfFile: altImagePath),
-           let dataProvider = CGDataProvider(data: imageData),
-           let image = CGImage(jpegDataProviderSource: dataProvider, decode: nil, shouldInterpolate: false, intent: .defaultIntent) {
-            return image
-        }
-        
+        print("❌ Could not load test image from \(iconPath)")
         return nil
     }
     
@@ -202,7 +301,7 @@ struct EmbeddingGenerator {
         // Calculate and report size savings
         let embeddingSize = jsonData.count
         let estimatedImageSize = embeddings.count * 200 * 1024 // Estimate 200KB per image
-        let savings = 100 - (embeddingSize * 100 / estimatedImageSize)
+        let savings = estimatedImageSize > 0 ? 100 - (embeddingSize * 100 / estimatedImageSize) : 0
         
         print("📊 Size Analysis:")
         print("   • Embeddings: \(embeddingSize / 1024)KB")
@@ -215,6 +314,9 @@ enum EmbeddingError: Error {
     case modelLoadFailed
     case dataLoadFailed
     case embeddingExtractionFailed
+    case modelNotFound
+    case modelNotLoaded
+    case preprocessingFailed
 }
 
 // MARK: - Main Execution

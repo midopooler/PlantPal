@@ -66,7 +66,7 @@ class Database {
         // Only create vector indexes for non-demo mode (plants use pre-computed embeddings)
         if !isDemoEnabled {
             // Initialize the vector index on the "image" field for image search.
-            var imageVectorIndex = VectorIndexConfiguration(expression: "image", dimensions: 768, centroids: 2)
+            var imageVectorIndex = VectorIndexConfiguration(expression: "image", dimensions: 512, centroids: 2)
             imageVectorIndex.metric = .cosine
             imageVectorIndex.isLazy = true
             try! collection.createIndex(withName: "ImageVectorIndex", config: imageVectorIndex)
@@ -203,10 +203,19 @@ class Database {
         
         // Sort by similarity (descending) and filter good matches
         let sortedSimilarities = similarities.sorted { $0.similarity > $1.similarity }
-        let bestMatches = sortedSimilarities.filter { $0.distance <= 0.25 }.prefix(10)
+        
+        // Debug: Print top similarities
+        print("🔍 Top 5 similarity scores:")
+        for (index, match) in sortedSimilarities.prefix(5).enumerated() {
+            let plantName = embeddingLoader.preComputedEmbeddings[match.plantId]?.name ?? "Unknown"
+            print("   \(index + 1). \(plantName): similarity=\(String(format: "%.3f", match.similarity)), distance=\(String(format: "%.3f", match.distance))")
+        }
+        
+        // For plant identification, only return the single best match if it's confident enough
+        let bestMatches = sortedSimilarities.filter { $0.distance <= 0.4 }.prefix(1)
         
         if bestMatches.isEmpty {
-            print("🤷‍♂️ No close plant matches found")
+            print("🤷‍♂️ No close plant matches found (even with relaxed threshold)")
             return []
         }
         
@@ -215,27 +224,26 @@ class Database {
         var distances = [Double]()
         
         for match in bestMatches {
+            print("🔍 Looking for plant record with ID: '\(match.plantId)'")
             if let plantRecord = getPlantRecord(plantId: match.plantId) {
                 records.append(plantRecord)
                 distances.append(Double(match.distance))
+                print("✅ Found plant record: \(plantRecord.title ?? "Unknown")")
+            } else {
+                print("❌ No plant record found for ID: '\(match.plantId)'")
+                // Try searching by name instead
+                if let plantName = embeddingLoader.preComputedEmbeddings[match.plantId]?.name,
+                   let plantRecord = getPlantRecordByName(plantName: plantName) {
+                    records.append(plantRecord)
+                    distances.append(Double(match.distance))
+                    print("✅ Found plant record by name: \(plantRecord.title ?? "Unknown")")
+                }
             }
         }
         
-        // Post process and filter any matches that are too far away from the closest match
-        var filteredRecords = [Record]()
-        let minimumDistance: Double = {
-            let minimumDistance = distances.min { a, b in a < b }
-            return minimumDistance ?? .greatestFiniteMagnitude
-        }()
-        for (index, distance) in distances.enumerated() {
-            if distance <= minimumDistance * 1.40 {
-                let record = records[index]
-                filteredRecords.append(record)
-            }
-        }
-        
-        print("✅ Found \(filteredRecords.count) plant matches using pre-computed embeddings")
-        return filteredRecords
+        // Return the single best match for plant identification
+        print("✅ Found \(records.count) plant matches using pre-computed embeddings")
+        return records
     }
     
     // Helper method to calculate cosine similarity between two vectors
@@ -249,6 +257,81 @@ class Database {
         guard magnitudeA > 0 && magnitudeB > 0 else { return 0.0 }
         
         return dotProduct / (magnitudeA * magnitudeB)
+    }
+    
+    // Helper method to get plant record from database by plant name
+    private func getPlantRecordByName(plantName: String) -> Record? {
+        let sql = """
+            SELECT type, name, scientificName, price, location, wateringSchedule, careInstructions, characteristics
+            FROM _
+            WHERE type = "plant" AND name = $plantName
+        """
+        
+        do {
+            let query = try collection.database.createQuery(sql)
+            query.parameters = Parameters()
+                .setString(plantName, forName: "plantName")
+            
+            for result in try query.execute() {
+                if let name = result["name"].string,
+                   let price = result["price"].number,
+                   let location = result["location"].string,
+                   let type = result["type"].string
+                {
+                    let scientificName = result["scientificName"].string
+                    var wateringSchedule: Plant.WateringSchedule?
+                    var careInstructions: Plant.CareInstructions?
+                    var characteristics: Plant.PlantCharacteristics?
+                    
+                    if let scheduleDict = result["wateringSchedule"].dictionary {
+                        wateringSchedule = Plant.WateringSchedule(
+                            frequency: scheduleDict["frequency"].string ?? "",
+                            amount: scheduleDict["amount"].string ?? "",
+                            notes: scheduleDict["notes"].string ?? ""
+                        )
+                    }
+                    
+                    if let instructionsDict = result["careInstructions"].dictionary {
+                        careInstructions = Plant.CareInstructions(
+                            light: instructionsDict["light"].string ?? "",
+                            temperature: instructionsDict["temperature"].string ?? "",
+                            humidity: instructionsDict["humidity"].string ?? "",
+                            fertilizer: instructionsDict["fertilizer"].string ?? "",
+                            pruning: instructionsDict["pruning"].string ?? ""
+                        )
+                    }
+                    
+                    if let characteristicsDict = result["characteristics"].dictionary {
+                        characteristics = Plant.PlantCharacteristics(
+                            toxicToPets: characteristicsDict["toxicToPets"].boolean ?? false,
+                            airPurifying: characteristicsDict["airPurifying"].boolean ?? false,
+                            flowering: characteristicsDict["flowering"].boolean ?? false,
+                            difficulty: characteristicsDict["difficulty"].string ?? ""
+                        )
+                    }
+                    
+                    // Create placeholder image for embedding-matched plants
+                    let placeholderImage = UIImage(systemName: "leaf.fill") ?? UIImage()
+                    let imageDigest = "precomputed_embedding_match"
+                    
+                    return Plant(
+                        name: name,
+                        scientificName: scientificName,
+                        price: price.doubleValue,
+                        location: location,
+                        wateringSchedule: wateringSchedule,
+                        careInstructions: careInstructions,
+                        characteristics: characteristics,
+                        image: placeholderImage,
+                        imageDigest: imageDigest
+                    )
+                }
+            }
+        } catch {
+            print("Database.getPlantRecordByName(plantName:): \(error.localizedDescription)")
+        }
+        
+        return nil
     }
     
     // Helper method to get plant record from database by plant ID
@@ -393,7 +476,7 @@ class Database {
                 // Generate the new embedding and set it in the index
                 for i in 0..<indexUpdater.count {
                     if let data = indexUpdater.blob(at: i)?.content, let image = UIImage(data: data) {
-                        let embedding = AI.shared.embedding(for: image, attention: .faces)
+                        let embedding = AI.shared.embedding(for: image, attention: .none)
                         try indexUpdater.setVector(embedding, at: i)
                     } else {
                         print("Warning: Could not process face image data for vector index at position \(i)")

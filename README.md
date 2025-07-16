@@ -51,7 +51,7 @@ PlantPal implements an innovative architecture that pre-computes vector embeddin
 ```
 Build Time (Xcode):
 ├── generate_embeddings.swift (processes plant images)
-├── Creates plant_embeddings.json (768-dim vectors)
+├── Creates plant_embeddings.json (512-dim vectors)
 └── Bundles only embeddings (no images)
 
 Runtime (App):
@@ -88,7 +88,7 @@ class BuildTimeEmbeddingLoader {
             return
         }
         
-        // Load 48 plants × 768 dimensions = ~150KB total
+        // Load 48 plants × 512 dimensions = ~100KB total
         for embedding in embeddings {
             preComputedEmbeddings[embedding.plantId] = embedding
         }
@@ -270,7 +270,7 @@ Optimized indexing configuration for plant image search:
 
 ```swift
 // Vector index for plant image embeddings
-var imageVectorIndex = VectorIndexConfiguration(expression: "image", dimensions: 768, centroids: 8)
+var imageVectorIndex = VectorIndexConfiguration(expression: "image", dimensions: 512, centroids: 8)
 imageVectorIndex.metric = .cosine
 imageVectorIndex.isLazy = true
 try! collection.createIndex(withName: "ImageVectorIndex", config: imageVectorIndex)

@@ -30,6 +30,7 @@
 		B1DEMO012C56B0F000C48D60 /* demo-data.json in Resources */ = {isa = PBXBuildFile; fileRef = B1DEMO002C56B0F000C48D60 /* demo-data.json */; };
 		D1688F022E11017B004B3A4B /* CouchbaseLiteSwift in Frameworks */ = {isa = PBXBuildFile; productRef = D1688F012E11017B004B3A4B /* CouchbaseLiteSwift */; };
 		D1688F052E11018B004B3A4B /* CouchbaseLiteVectorSearch in Frameworks */ = {isa = PBXBuildFile; productRef = D1688F042E11018B004B3A4B /* CouchbaseLiteVectorSearch */; };
+		D1901F482E26D0D7003C066C /* MobileCLIPWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1901F472E26D0D7003C066C /* MobileCLIPWrapper.swift */; };
 		D1DC99F62E154C8500882E98 /* PlantChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC99F52E154C8500882E98 /* PlantChatViewController.swift */; };
 		D1DC99F82E154C9D00882E98 /* ChatMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC99F72E154C9D00882E98 /* ChatMessageCell.swift */; };
 		D1DC99FB2E154CCD00882E98 /* PlantLLMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1DC99FA2E154CCD00882E98 /* PlantLLMService.swift */; };
@@ -80,6 +81,7 @@
 		B0F3276B2BFEE7CC007376C3 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B0F3276D2BFEE8A4007376C3 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		B1DEMO002C56B0F000C48D60 /* demo-data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "demo-data.json"; sourceTree = "<group>"; };
+		D1901F472E26D0D7003C066C /* MobileCLIPWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileCLIPWrapper.swift; sourceTree = "<group>"; };
 		D1DC99F52E154C8500882E98 /* PlantChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantChatViewController.swift; sourceTree = "<group>"; };
 		D1DC99F72E154C9D00882E98 /* ChatMessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessageCell.swift; sourceTree = "<group>"; };
 		D1DC99F92E154CCD00882E98 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
@@ -93,6 +95,8 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		D1901F292E26B1CF003C066C /* models */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = models; sourceTree = "<group>"; };
+		D1901F782E26E57D003C066C /* dataset */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = dataset; sourceTree = "<group>"; };
 		D1DC9A092E196DAF00882E98 /* Scripts */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Scripts; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -151,6 +155,8 @@
 		B09602102BF7014700F6A866 /* PlantPal-Offline */ = {
 			isa = PBXGroup;
 			children = (
+				D1901F782E26E57D003C066C /* dataset */,
+				D1901F292E26B1CF003C066C /* models */,
 				B0EBE56F2BF9167C002FF20C /* Database.swift */,
 				D1DC99F92E154CCD00882E98 /* ChatMessage.swift */,
 				D1DC99FA2E154CCD00882E98 /* PlantLLMService.swift */,
@@ -159,6 +165,7 @@
 				D1DC9A032E196D8100882E98 /* EmbeddingTest.swift */,
 				D1DC9A012E196D6F00882E98 /* embedding_metadata.json */,
 				D1DC9A052E196D8F00882E98 /* plant_embeddings.json */,
+				D1901F472E26D0D7003C066C /* MobileCLIPWrapper.swift */,
 				B0EBE5712BF91CB2002FF20C /* AI.swift */,
 				D1DC99FF2E1968CC00882E98 /* BuildTimeEmbeddingLoader.swift */,
 				B0EBE5742C1D8AB3002FF20C /* PlantDataProcessor.swift */,
@@ -199,6 +206,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				D1901F292E26B1CF003C066C /* models */,
+				D1901F782E26E57D003C066C /* dataset */,
 				D1DC9A092E196DAF00882E98 /* Scripts */,
 			);
 			name = "PlantPal-Offline";
@@ -272,6 +281,7 @@
 				B07E83992C28867A002BCC1D /* RecordsView.swift in Sources */,
 				B09602122BF7014700F6A866 /* AppDelegate.swift in Sources */,
 				D1DC9A042E196D8100882E98 /* EmbeddingTest.swift in Sources */,
+				D1901F482E26D0D7003C066C /* MobileCLIPWrapper.swift in Sources */,
 				D1DC9A0D2E196DBF00882E98 /* test_compilation.swift in Sources */,
 				B09DB42F2C1E89C600FBCB95 /* TabBarController.swift in Sources */,
 				D1DC9A002E1968CC00882E98 /* BuildTimeEmbeddingLoader.swift in Sources */,
@@ -442,7 +452,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 57CXDH6G46;
+				DEVELOPMENT_TEAM = DFQY8NB65M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PlantPal-Offline/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = PlantPal;
@@ -477,7 +487,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 57CXDH6G46;
+				DEVELOPMENT_TEAM = DFQY8NB65M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "PlantPal-Offline/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = PlantPal;

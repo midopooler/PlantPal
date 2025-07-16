@@ -46,7 +46,7 @@ class BuildTimeEmbeddingLoader {
         }
         
         print("✅ Pre-computed embeddings loaded successfully!")
-        print("💾 Memory usage: ~\(embeddings.count * 768 * 4 / 1024)KB (vs ~10MB for images)")
+        print("💾 Memory usage: ~\(embeddings.count * 512 * 4 / 1024)KB (vs ~10MB for images)")
     }
     
     // MARK: - Process Plant Data with Pre-computed Embeddings
@@ -82,31 +82,31 @@ class BuildTimeEmbeddingLoader {
     // MARK: - Embedding Lookup for New Images
     
     func getEmbeddingForNewImage(_ image: UIImage) -> [Float]? {
-        // For new images (camera captures), we still need to generate embeddings
-        // This uses the same AI.swift embedding generation but only for new images
-        return AI.shared.embedding(for: image)
+        // For new images (camera captures), we use MobileCLIP directly
+        guard let cgImage = image.cgImage else { return nil }
+        return MobileCLIPWrapper.shared.embedding(for: cgImage)
     }
     
     // MARK: - Performance Metrics
     
     func printPerformanceMetrics() {
         let embeddingCount = preComputedEmbeddings.count
-        let embeddingSize = embeddingCount * 768 * 4 // 768 floats * 4 bytes each
+        let embeddingSize = embeddingCount * 512 * 4 // 512 floats * 4 bytes each
         let estimatedImageSize = embeddingCount * 150 * 1024 // Estimate 150KB per image
         
         print("""
-        📊 Pre-computed Embedding Performance:
+        📊 MobileCLIP Pre-computed Embedding Performance:
         
         🌱 Plants: \(embeddingCount)
-        💾 Embedding data: \(embeddingSize / 1024)KB
+        💾 Embedding data: \(embeddingSize / 1024)KB (512-dim vectors)
         🖼️ Estimated original images: \(estimatedImageSize / 1024 / 1024)MB
         📉 Size reduction: \(100 - (embeddingSize * 100 / estimatedImageSize))%
         
-        ⚡ Performance benefits:
-        • No runtime embedding generation
-        • Instant plant database loading
-        • Reduced memory usage
-        • Faster app startup
+        ⚡ MobileCLIP Performance benefits:
+        • No runtime embedding generation for reference plants
+        • Instant plant database loading with 512-dim vectors
+        • Reduced memory usage vs Vision framework (768-dim)
+        • Faster app startup and better accuracy
         """)
     }
 } 

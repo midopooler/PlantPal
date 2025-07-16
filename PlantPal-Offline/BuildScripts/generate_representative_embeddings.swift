@@ -8,9 +8,152 @@
 //
 
 import Foundation
-import Vision
+// import Vision // Replaced with MobileCLIP
 import CoreImage
 import CoreML
+
+// MARK: - MobileCLIP Integration for Build Scripts
+
+class BuildTimeMobileCLIP {
+    private var imageModel: MLModel?
+    private let modelName = "mobileclip_s1_image"
+    
+    init() throws {
+        try loadModel()
+    }
+    
+    private func loadModel() throws {
+        // Look for model in the models directory
+        let modelURL = URL(fileURLWithPath: "../PlantPal-Offline/models/\(modelName).mlpackage")
+        
+        guard FileManager.default.fileExists(atPath: modelURL.path) else {
+            throw EmbeddingError.modelNotFound
+        }
+        
+        print("🔨 Compiling MobileCLIP model...")
+        let compiledModelURL = try MLModel.compileModel(at: modelURL)
+        
+        let configuration = MLModelConfiguration()
+        configuration.computeUnits = .all
+        imageModel = try MLModel(contentsOf: compiledModelURL, configuration: configuration)
+        print("✅ Loaded and compiled MobileCLIP model for build-time generation")
+    }
+    
+    func generateEmbedding(for cgImage: CGImage) throws -> [Float] {
+        guard let model = imageModel else {
+            throw EmbeddingError.modelNotLoaded
+        }
+        
+        // Preprocess image for MobileCLIP (256x256)
+        let scaledImage = fit(cgImage: cgImage, to: CGSize(width: 256, height: 256))
+        guard let pixelBuffer = createPixelBuffer(from: scaledImage) else {
+            throw EmbeddingError.preprocessingFailed
+        }
+        
+        do {
+            let input = try MLDictionaryFeatureProvider(dictionary: ["image": MLFeatureValue(pixelBuffer: pixelBuffer)])
+            let output = try model.prediction(from: input)
+            
+            guard let embeddingArray = output.featureValue(for: "final_emb_1")?.multiArrayValue else {
+                throw EmbeddingError.embeddingExtractionFailed
+            }
+            
+            let embedding = convertMLMultiArrayToFloat(embeddingArray)
+            
+            if embedding.count != 512 {
+                print("⚠️ Unexpected embedding dimension: \(embedding.count), expected 512")
+            }
+            
+            return embedding
+            
+        } catch {
+            throw EmbeddingError.embeddingExtractionFailed
+        }
+    }
+    
+    private func createPixelBuffer(from cgImage: CGImage) -> CVPixelBuffer? {
+        // MobileCLIP requires exactly 256x256 pixels
+        let width = 256
+        let height = 256
+        
+        let attributes: [String: Any] = [
+            kCVPixelBufferCGImageCompatibilityKey as String: true,
+            kCVPixelBufferCGBitmapContextCompatibilityKey as String: true
+        ]
+        
+        var pixelBuffer: CVPixelBuffer?
+        let status = CVPixelBufferCreate(
+            kCFAllocatorDefault,
+            width,
+            height,
+            kCVPixelFormatType_32ARGB,
+            attributes as CFDictionary,
+            &pixelBuffer
+        )
+        
+        guard status == kCVReturnSuccess, let buffer = pixelBuffer else {
+            return nil
+        }
+        
+        CVPixelBufferLockBaseAddress(buffer, CVPixelBufferLockFlags(rawValue: 0))
+        defer { CVPixelBufferUnlockBaseAddress(buffer, CVPixelBufferLockFlags(rawValue: 0)) }
+        
+        let pixelData = CVPixelBufferGetBaseAddress(buffer)
+        let rgbColorSpace = CGColorSpaceCreateDeviceRGB()
+        
+        guard let context = CGContext(
+            data: pixelData,
+            width: width,
+            height: height,
+            bitsPerComponent: 8,
+            bytesPerRow: CVPixelBufferGetBytesPerRow(buffer),
+            space: rgbColorSpace,
+            bitmapInfo: CGImageAlphaInfo.noneSkipFirst.rawValue
+        ) else {
+            return nil
+        }
+        
+        // Scale the image to fit exactly 256x256
+        context.draw(cgImage, in: CGRect(x: 0, y: 0, width: 256, height: 256))
+        return buffer
+    }
+    
+    private func convertMLMultiArrayToFloat(_ multiArray: MLMultiArray) -> [Float] {
+        let count = multiArray.count
+        let dataPointer = multiArray.dataPointer.bindMemory(to: Float.self, capacity: count)
+        return Array(UnsafeBufferPointer(start: dataPointer, count: count))
+    }
+    
+    private func fit(cgImage: CGImage, to size: CGSize) -> CGImage {
+        let imageSize = CGSize(width: cgImage.width, height: cgImage.height)
+        let scaleFactor = min(size.width / imageSize.width, size.height / imageSize.height)
+        let newSize = CGSize(width: imageSize.width * scaleFactor, height: imageSize.height * scaleFactor)
+        
+        let context = CGContext(
+            data: nil,
+            width: Int(size.width),
+            height: Int(size.height),
+            bitsPerComponent: cgImage.bitsPerComponent,
+            bytesPerRow: 0,
+            space: cgImage.colorSpace ?? CGColorSpaceCreateDeviceRGB(),
+            bitmapInfo: cgImage.bitmapInfo.rawValue
+        )
+        
+        let offsetX = (size.width - newSize.width) / 2
+        let offsetY = (size.height - newSize.height) / 2
+        context?.draw(cgImage, in: CGRect(x: offsetX, y: offsetY, width: newSize.width, height: newSize.height))
+        
+        return context?.makeImage() ?? cgImage
+    }
+}
+
+enum EmbeddingError: Error {
+    case modelNotFound
+    case modelNotLoaded
+    case preprocessingFailed
+    case embeddingExtractionFailed
+    case dataLoadFailed
+}
 
 // MARK: - Data Structures
 
@@ -49,9 +192,13 @@ struct Config {
 // MARK: - Main Processing Class
 
 class RepresentativeEmbeddingGenerator {
-    private let imageFeatureExtractor = VNGenerateImageFeaturePrintRequest()
+    private let mobileCLIP: BuildTimeMobileCLIP
     private var processedCount = 0
     private var totalCount = 0
+    
+    init() throws {
+        mobileCLIP = try BuildTimeMobileCLIP()
+    }
     
     func generateRepresentativeEmbeddings() {
         print("🚀 Starting representative embedding generation...")
@@ -194,19 +341,12 @@ class RepresentativeEmbeddingGenerator {
     private func generateEmbedding(for imagePath: String) -> [Float]? {
         guard let image = loadImage(from: imagePath) else { return nil }
         
-        let handler = VNImageRequestHandler(ciImage: image)
-        
         do {
-            try handler.perform([imageFeatureExtractor])
-            
-            if let result = imageFeatureExtractor.results?.first as? VNFeaturePrintObservation {
-                return Array(UnsafeBufferPointer(start: result.data.bindMemory(to: Float.self, capacity: result.elementCount), count: result.elementCount))
-            }
+            return try mobileCLIP.generateEmbedding(for: image)
         } catch {
-            print("❌ Error generating embedding for \(imagePath): \(error)")
+            print("❌ Error generating MobileCLIP embedding for \(imagePath): \(error)")
+            return nil
         }
-        
-        return nil
     }
     
     private func selectRepresentatives(from embeddings: [PlantImageData]) -> [RepresentativeEmbedding] {
@@ -384,9 +524,14 @@ class RepresentativeEmbeddingGenerator {
     
     // MARK: - Helper Methods
     
-    private func loadImage(from path: String) -> CIImage? {
+    private func loadImage(from path: String) -> CGImage? {
         let url = URL(fileURLWithPath: path)
-        return CIImage(contentsOf: url)
+        
+        // Load as CIImage first, then convert to CGImage
+        guard let ciImage = CIImage(contentsOf: url) else { return nil }
+        
+        let context = CIContext()
+        return context.createCGImage(ciImage, from: ciImage.extent)
     }
     
     private func generatePlantId(from folderName: String) -> String {
@@ -430,5 +575,10 @@ extension Array {
 
 // MARK: - Main Execution
 
-let generator = RepresentativeEmbeddingGenerator()
-generator.generateRepresentativeEmbeddings() 
+do {
+    let generator = try RepresentativeEmbeddingGenerator()
+    generator.generateRepresentativeEmbeddings()
+} catch {
+    print("❌ Representative embedding generation failed: \(error)")
+    exit(1)
+} 

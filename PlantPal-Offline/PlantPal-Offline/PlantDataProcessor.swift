@@ -75,11 +75,19 @@ class PlantDataProcessor: ObservableObject {
         // Clear existing data if any
         if collection.count > 0 {
             updateProgress("Processing", 0, "Processing...")
-            try! database.delete()
-            let newDatabase = try! CouchbaseLiteSwift.Database(name: "demo")
-            let newCollection = try! newDatabase.defaultCollection()
-            setupIndices(for: newCollection)
-            processItems(demoData, in: newCollection)
+            // Clear all documents instead of deleting the database to avoid connection conflicts
+            let query = CouchbaseLiteSwift.QueryBuilder.select(CouchbaseLiteSwift.SelectResult.expression(CouchbaseLiteSwift.Meta.id))
+                .from(CouchbaseLiteSwift.DataSource.collection(collection))
+            
+            let results = try! query.execute()
+            for result in results {
+                if let docId = result.string(at: 0),
+                   let document = try? collection.document(id: docId) {
+                    try! collection.delete(document: document)
+                }
+            }
+            setupIndices(for: collection)
+            processItems(demoData, in: collection)
         } else {
             setupIndices(for: collection)
             processItems(demoData, in: collection)

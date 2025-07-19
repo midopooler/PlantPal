@@ -166,8 +166,8 @@ struct EmbeddingGenerator {
     func generateEmbeddingsFromPlantData() throws {
         print("🌱 Starting build-time embedding generation from dataset folder...")
         
-        // Read plant images directly from dataset folder
-        let datasetPath = "../PlantPal-Offline/dataset"
+        // Read plant images directly from full-dataset folder
+        let datasetPath = "../PlantPal-Offline/full-dataset"
         let datasetURL = URL(fileURLWithPath: datasetPath)
         
         guard let imageFiles = try? FileManager.default.contentsOfDirectory(at: datasetURL, includingPropertiesForKeys: nil, options: [.skipsHiddenFiles]) else {
@@ -225,15 +225,21 @@ struct EmbeddingGenerator {
     }
     
     private func parseFilename(_ filename: String) -> (plantName: String, scientificName: String?) {
-        // Parse format: "Plant Name (Scientific name)" or just "Plant Name"
+        // Parse format: "Plant Name (Scientific name)" or "Plant Name" or "Plant Name 123"
+        var baseName = filename
+        var scientificName: String? = nil
+        
+        // Extract scientific name if present
         if let parenIndex = filename.firstIndex(of: "("),
            let closeParenIndex = filename.firstIndex(of: ")") {
-            let plantName = String(filename[..<parenIndex]).trimmingCharacters(in: .whitespaces)
-            let scientificName = String(filename[filename.index(after: parenIndex)..<closeParenIndex])
-            return (plantName, scientificName)
-        } else {
-            return (filename, nil)
+            baseName = String(filename[..<parenIndex]).trimmingCharacters(in: .whitespaces)
+            scientificName = String(filename[filename.index(after: parenIndex)..<closeParenIndex])
         }
+        
+        // Remove trailing numbers and spaces (e.g., "Aloe Vera 139" -> "Aloe Vera")
+        let cleanedName = baseName.replacingOccurrences(of: #"\s+\d+$"#, with: "", options: .regularExpression)
+        
+        return (cleanedName, scientificName)
     }
     
     private func loadCGImage(from data: Data) -> CGImage? {

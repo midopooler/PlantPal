@@ -97,6 +97,7 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D1901F292E26B1CF003C066C /* models */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = models; sourceTree = "<group>"; };
 		D1901F782E26E57D003C066C /* dataset */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = dataset; sourceTree = "<group>"; };
+		D190591D2E2BDE3E003C066C /* full-dataset */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "full-dataset"; sourceTree = "<group>"; };
 		D1DC9A092E196DAF00882E98 /* Scripts */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Scripts; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -155,6 +156,7 @@
 		B09602102BF7014700F6A866 /* PlantPal-Offline */ = {
 			isa = PBXGroup;
 			children = (
+				D190591D2E2BDE3E003C066C /* full-dataset */,
 				D1901F782E26E57D003C066C /* dataset */,
 				D1901F292E26B1CF003C066C /* models */,
 				B0EBE56F2BF9167C002FF20C /* Database.swift */,

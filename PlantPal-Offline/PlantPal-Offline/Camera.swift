@@ -9,15 +9,15 @@ import UIKit
 import AVFoundation
 import Combine
 
-class Camera : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
+class Camera : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate, AVCapturePhotoCaptureDelegate {
     static let shared = Camera()
     
     private let session = AVCaptureSession()
     private let videoOutput = AVCaptureVideoDataOutput()
+    private let photoOutput = AVCapturePhotoOutput()
     private let sessionQueue = DispatchQueue(label: "VideoSessionQueue", qos: .userInitiated, attributes: [], autoreleaseFrequency: .workItem)
     
-    private let captureInterval: TimeInterval = 0.2
-    private var captureTimestamp: TimeInterval = 0.0
+    // Removed continuous capture - now using photo capture mode
     
     private var rotationCoordinator: AVCaptureDevice.RotationCoordinator!
     private var rotationObservers = [AnyObject]()
@@ -26,6 +26,7 @@ class Camera : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
     
     @Published var authorized: Bool = false
     @Published var records: [Database.Record] = []
+    @Published var isProcessingPhoto: Bool = false // Add processing state
     let preview: Preview
     
     private override init() {
@@ -102,7 +103,6 @@ class Camera : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
             guard self.session.isRunning == false else { return }
             
             self.setupSession()
-            self.captureTimestamp = 0
             self.session.startRunning()
         }
     }
@@ -121,10 +121,19 @@ class Camera : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
         
         do {
             if session.outputs.count == 0 {
+                // Add photo output for single photo capture
+                if session.canAddOutput(photoOutput) {
+                    session.addOutput(photoOutput)
+                } else {
+                    throw "Could not add photo output"
+                }
+                
+                // Keep video output for preview only (no continuous processing)
                 if session.canAddOutput(videoOutput) {
                     videoOutput.alwaysDiscardsLateVideoFrames = true
                     videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: Int(kCVPixelFormatType_32BGRA)]
-                    videoOutput.setSampleBufferDelegate(self, queue: sessionQueue)
+                    // Remove continuous delegate - no more continuous processing
+                    // videoOutput.setSampleBufferDelegate(self, queue: sessionQueue)
                     session.addOutput(videoOutput)
                 } else {
                     throw "Could not add video output"
@@ -245,50 +254,64 @@ class Camera : NSObject, AVCaptureVideoDataOutputSampleBufferDelegate {
         return UIImage(cgImage: cgImage, scale: 1.0, orientation: .up)
     }
     
-    func shouldCaptureImage() -> Bool {
-        let now = Date.now.timeIntervalSince1970
+    // MARK: - Photo Capture
+    
+    func capturePhoto() {
+        guard !isProcessingPhoto else { return } // Prevent multiple captures
         
-        if captureTimestamp == 0 {
-            captureTimestamp = now
-            return false
-        }
+        isProcessingPhoto = true
         
-        if now - captureTimestamp < captureInterval {
-            return false
-        }
+        let settings = AVCapturePhotoSettings()
+        settings.flashMode = .auto
         
-        captureTimestamp = now
-        return true
+        photoOutput.capturePhoto(with: settings, delegate: self)
     }
-  
-    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        guard shouldCaptureImage() else { return }
+    
+    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        defer { isProcessingPhoto = false }
         
-        guard let image = imageFromSampleBuffer(sampleBuffer: sampleBuffer) else {
+        guard error == nil else {
+            print("Photo capture error: \(error?.localizedDescription ?? "Unknown error")")
             return
         }
         
-        // Get the bounds and focus rect for
-        var previewBounds: CGRect = .zero
-        var focusRect: CGRect = .zero
-        DispatchQueue.main.sync {
-            previewBounds = preview.bounds
-            focusRect = preview.focusRect
+        guard let imageData = photo.fileDataRepresentation(),
+              let image = UIImage(data: imageData) else {
+            print("Failed to convert photo to UIImage")
+            return
         }
         
-        self.sessionQueue.async {
-            guard self.session.isRunning else { return }
+        // Get the bounds and focus rect for cropping on main thread
+        DispatchQueue.main.async {
+            let previewBounds = self.preview.bounds
+            let focusRect = self.preview.focusRect
             
-            // Find the records
-            let croppedImage = self.cropImage(image, toFocusRect: focusRect, inPreviewBounds: previewBounds)
-            let records = Database.shared.search(image: croppedImage)
-            
-            // If the found records have changed, update them
-            if self.records != records {
-                self.records = records
+            // Process the captured photo on background thread
+            DispatchQueue.global(qos: .userInitiated).async {
+                // Crop the image to the viewfinder area
+                let croppedImage = self.cropImage(image, toFocusRect: focusRect, inPreviewBounds: previewBounds)
+                
+                // Search for plants in the cropped image
+                let records = Database.shared.search(image: croppedImage)
+                
+                // Update results on main thread
+                DispatchQueue.main.async {
+                    self.records = records
+                }
             }
         }
     }
+    
+    // Remove old continuous processing - no longer needed
+    /*
+    func shouldCaptureImage() -> Bool {
+        // Removed - no longer using continuous capture
+    }
+  
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        // Removed - no longer using continuous processing
+    }
+    */
     
     private func cropImage(_ image: UIImage, toFocusRect focusRect: CGRect, inPreviewBounds previewBounds: CGRect) -> UIImage {
         let imageWidth = CGFloat(image.size.width)

@@ -174,7 +174,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Look for plants around you" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlantInstructionLabel">
-                                <rect key="frame" x="50" y="520" width="293" height="20.5"/>
+                                <rect key="frame" x="50" y="163" width="293" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="white" systemColor="systemBackgroundColor"/>
                                 <nil key="highlightedColor"/>
@@ -251,7 +251,7 @@
                             <constraint firstItem="1zY-YC-9Tz" firstAttribute="centerX" secondItem="PP7-XP-PQf" secondAttribute="centerX" id="u1A-Sb-gVB"/>
                             <constraint firstItem="XRk-pX-bZd" firstAttribute="bottom" secondItem="1zY-YC-9Tz" secondAttribute="top" constant="-16" id="zk6-xC-0E6"/>
                             <constraint firstItem="PlantInstructionLabel" firstAttribute="centerX" secondItem="PP7-XP-PQf" secondAttribute="centerX" id="PlantLabel-CenterX"/>
-                            <constraint firstItem="PlantInstructionLabel" firstAttribute="bottom" secondItem="1zY-YC-9Tz" secondAttribute="top" constant="-80" id="PlantLabel-Bottom"/>
+                            <constraint firstItem="PlantInstructionLabel" firstAttribute="top" secondItem="YeZ-O4-ITi" secondAttribute="top" constant="60" id="PlantLabel-Top"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
